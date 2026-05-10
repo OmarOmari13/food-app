@@ -1,47 +1,101 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaSearch, FaPlay } from "react-icons/fa";
+import { FaSearch, FaPlay, FaMoon, FaSun } from "react-icons/fa";
 
 export default function FoodLandingPage() {
-  return (
-    <main className="min-h-screen overflow-hidden relative bg-gradient-to-br from-[#ffede6] via-[#fff4ef] to-[#ffe3d7] dark:from-[#0f0f0f] dark:via-[#161616] dark:to-[#1f1f1f] transition-colors duration-500">
-      
-      {/* Gradient Blur */}
-      <div className="absolute top-[-150px] left-[-150px] w-[450px] h-[450px] rounded-full bg-[#ff5a5f]/20 blur-3xl z-0" />
-      <div className="absolute bottom-[-180px] right-[-150px] w-[500px] h-[500px] rounded-full bg-[#f7b733]/20 blur-3xl z-0" />
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  return (
+    <main className="">
+      
       {/* NAVBAR */}
-      <header className="relative z-20 flex items-center justify-between px-10 lg:px-20 py-6">
+      <header className="relative z-20 flex items-center justify-between px-10 lg:px-20 ">
+        
         <div className="text-3xl font-black italic text-black dark:text-white">
-         <Image alt="logo" src="/logo.png" height={150} width={150}/>
+          <Image
+            alt="logo"
+            src="/logo.png"
+            height={150}
+            width={150}
+          />
         </div>
+
         <div className="">
-            <Image src="/Vector 2.png" alt="dashedline" height={150} width={150} className="relative top-28 right-35"/>
-            <Image src="/Arrow 1 (Stroke).png" alt="dashedline" height={15} width={15} className="relative top-28 right-[-2]"/>
+          <Image
+            src="/Vector 2.png"
+            alt="dashedline"
+            height={150}
+            width={150}
+            className="relative top-28 right-35"
+          />
+
+          <Image
+            src="/Arrow 1 (Stroke).png"
+            alt="dashedline"
+            height={15}
+            width={15}
+            className="relative top-28 right-[-2]"
+          />
         </div>
 
         <nav className="hidden lg:flex items-center gap-12 text-[15px] font-medium text-gray-700 dark:text-gray-300">
-          <a href="#" className="hover:text-[#ff5a5f] transition-colors">
+          
+          <a
+            href="#"
+            className="hover:text-[#ff5a5f] transition-colors"
+          >
             Today Special Offers
           </a>
 
-          <a href="#" className="hover:text-[#ff5a5f] transition-colors">
+          <a
+            href="#"
+            className="hover:text-[#ff5a5f] transition-colors"
+          >
             Why FoodHut
           </a>
 
-          <a href="#" className="hover:text-[#ff5a5f] transition-colors">
+          <a
+            href="#"
+            className="hover:text-[#ff5a5f] transition-colors"
+          >
             Our Menu
           </a>
 
-          <a href="#" className="hover:text-[#ff5a5f] transition-colors">
+          <a
+            href="#"
+            className="hover:text-[#ff5a5f] transition-colors"
+          >
             Our Popular Food
           </a>
         </nav>
 
-        <button className="bg-[#ff5a5f] text-white px-7 py-3 rounded-full text-sm font-semibold shadow-xl hover:scale-105 transition-transform">
-          Download App
-        </button>
+        {/* RIGHT SIDE */}
+        <div className="flex items-center gap-4">
+
+          {/* DARK MODE BUTTON */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="w-12 h-12 rounded-full bg-white dark:bg-[#1c1c1c] border border-gray-200 dark:border-[#2c2c2c] flex items-center justify-center shadow-lg text-[#ff5a5f] transition-all duration-300"
+          >
+            {darkMode ? <FaSun /> : <FaMoon />}
+          </button>
+
+          {/* DOWNLOAD BUTTON */}
+          <button className="bg-[#ff5a5f] text-white px-7 py-3 rounded-full text-sm font-semibold shadow-xl hover:scale-105 transition-transform">
+            Download App
+          </button>
+        </div>
       </header>
 
       {/* HERO */}
@@ -50,6 +104,7 @@ export default function FoodLandingPage() {
 
           {/* LEFT */}
           <div>
+
             <div className="inline-flex items-center gap-2 mb-8">
               <div className="w-3 h-3 rounded-full bg-[#ff5a5f]" />
 
@@ -59,18 +114,29 @@ export default function FoodLandingPage() {
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-black leading-tight text-black dark:text-white">
-              We&apos;re <span className="text-[#ff5a5f]">Serious</span> For <br />
-              <span className="text-[#ff5a5f]">Food</span> &{" "}
-              <span className="text-[#f7b733]">Delivery.</span>
+              We&apos;re{" "}
+              <span className="text-[#ff5a5f]">
+                Serious
+              </span>{" "}
+              For <br />
+
+              <span className="text-[#ff5a5f]">
+                Food
+              </span>{" "}
+              &{" "}
+              <span className="text-[#f7b733]">
+                Delivery.
+              </span>
             </h1>
 
             <p className="mt-8 text-lg leading-9 text-gray-600 dark:text-gray-400 max-w-xl">
-              Best cooks and best delivery guys all at your service. Hot tasty
-              food will reach you in 60 minutes.
+              Best cooks and best delivery guys all at your service.
+              Hot tasty food will reach you in 60 minutes.
             </p>
 
             {/* SEARCH */}
             <div className="mt-10 flex items-center border border-[#e9d8d2] dark:border-[#2b2b2b] rounded-full px-6 py-4 max-w-xl bg-white/70 dark:bg-[#1d1d1d]/80 backdrop-blur-md">
+
               <FaSearch className="text-gray-400 text-lg" />
 
               <input
@@ -86,11 +152,13 @@ export default function FoodLandingPage() {
 
             {/* BUTTONS */}
             <div className="flex items-center gap-8 mt-10">
+
               <button className="bg-[#ff5a5f] text-white px-8 py-4 rounded-full font-semibold shadow-2xl hover:scale-105 transition-transform">
                 Download App
               </button>
 
               <div className="flex items-center gap-4 cursor-pointer">
+
                 <div className="w-14 h-14 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center text-[#ff5a5f] shadow-lg bg-white dark:bg-[#1c1c1c]">
                   <FaPlay className="ml-1" />
                 </div>
@@ -116,6 +184,7 @@ export default function FoodLandingPage() {
 
             {/* Pizza Card */}
             <div className="absolute top-40 left-10 px-3 py-2 rounded-[7px] border border-gray-200 dark:border-[#2c2c2c] bg-white dark:bg-[#1c1c1c] shadow-xl flex items-center gap-4 z-20">
+
               <Image
                 src="/food1.png"
                 alt="pizza"
@@ -129,12 +198,15 @@ export default function FoodLandingPage() {
                   Italian Pizza
                 </p>
 
-                <span className="text-gray-500 text-sm">$9.50</span>
+                <span className="text-gray-500 text-sm">
+                  $9.50
+                </span>
               </div>
             </div>
 
             {/* Customer Card */}
             <div className="absolute top-40 right-0 py-2 px-4 rounded-full border border-gray-200 dark:border-[#2c2c2c] bg-white dark:bg-[#1c1c1c] shadow-xl flex items-center gap-3 z-20">
+
               <div className="w-12 h-12 rounded-full flex items-center justify-center text-[55px] rotate-20">
                 😊
               </div>
@@ -148,13 +220,26 @@ export default function FoodLandingPage() {
                   4.8 (1.5k Reviews)
                 </span>
               </div>
-              
             </div>
-            <div className="absolute z-10 top-20 right-6">
-                <Image src="/Vector 3.png" alt="Dashed line" height={130} width={130} className="relative bottom-40 left-3"/>
-                <Image src="/Polygon 1.png" alt="Dashed line" height={15} width={15} className="relative bottom-130 left-16"/>
 
-              </div>
+            <div className="absolute z-10 top-20 right-6">
+
+              <Image
+                src="/Vector 3.png"
+                alt="Dashed line"
+                height={130}
+                width={130}
+                className="relative bottom-40 left-3"
+              />
+
+              <Image
+                src="/Polygon 1.png"
+                alt="Dashed line"
+                height={15}
+                width={15}
+                className="relative bottom-130 left-16"
+              />
+            </div>
 
             {/* Floating Foods */}
             <div className="absolute bottom-16 left-12 z-20">
