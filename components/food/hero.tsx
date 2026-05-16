@@ -4,21 +4,21 @@ import Image from "next/image";
 
 export default function FoodHero() {
   return (
-    <section className="overflow-hidden px-4">
+    <section className="">
       <div className="relative w-full max-w-[340px] sm:max-w-[420px] md:max-w-[550px] lg:max-w-[700px] aspect-square mx-auto">
 
         {/* Decorative Circles */}
-        <div className="absolute top-6 right-0 w-24 h-24 border border-orange-200 rounded-full opacity-40" />
-        <div className="absolute top-10 right-6 w-16 h-16 border border-orange-200 rounded-full opacity-40" />
+        <div className="absolute top-6 right-0 w-24 h-24 border border-orange-200/50 dark:border-orange-400/20 rounded-full opacity-50" />
+        <div className="absolute top-10 right-6 w-16 h-16 border border-orange-200/50 dark:border-orange-400/20 rounded-full opacity-50" />
 
         {/* Main Red Circle */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[72%] h-[72%] rounded-full bg-[#ff4b4b]" />
+          <div className="w-[72%] h-[72%] rounded-full bg-[#ff4b4b] dark:bg-[#ff3b3b] shadow-2xl" />
         </div>
 
         {/* White Ring */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[84%] h-[84%] rounded-full border-[12px] md:border-[18px] border-white/70" />
+          <div className="w-[84%] h-[84%] rounded-full border-[12px] md:border-[18px] border-white/70 dark:border-white/10" />
         </div>
 
         {/* Main Girl Image */}
@@ -28,7 +28,7 @@ export default function FoodHero() {
             alt="Girl eating pizza"
             width={500}
             height={700}
-            className="object-contain w-[62%] sm:w-[60%] md:w-[58%] drop-shadow-2xl"
+            className="object-contain w-[62%] sm:w-[60%] md:w-[58%] drop-shadow-2xl rounded-3xl"
           />
         </div>
 
@@ -38,18 +38,18 @@ export default function FoodHero() {
         </div>
 
         {/* Left Pizza Card */}
-        <div className="absolute top-[20%] left-[-2%] sm:left-[2%] bg-white rounded-2xl shadow-lg px-2 py-2 sm:px-3 sm:py-3 flex items-center gap-2 z-40">
+        <div className="absolute top-[20%] left-[-2%] sm:left-[2%] bg-white dark:bg-[#1a1a22] rounded-3xl shadow-xl dark:shadow-black/40 px-2 py-2 sm:px-3 sm:py-3 flex items-center gap-2 z-40 border border-gray-100 dark:border-white/10">
 
           <Image
             src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500&auto=format&fit=crop"
             alt="Pizza"
             width={60}
             height={60}
-            className="rounded-xl object-cover w-[45px] h-[45px] sm:w-[60px] sm:h-[60px]"
+            className="rounded-2xl object-cover w-[45px] h-[45px] sm:w-[60px] sm:h-[60px]"
           />
 
           <div>
-            <h3 className="font-semibold text-[10px] sm:text-sm">
+            <h3 className="font-semibold text-[10px] sm:text-sm text-gray-900 dark:text-white">
               Italian Pizza
             </h3>
 
@@ -57,25 +57,25 @@ export default function FoodHero() {
               ★★★★★
             </p>
 
-            <p className="font-bold text-[10px] sm:text-sm mt-1">
+            <p className="font-bold text-[10px] sm:text-sm mt-1 text-gray-900 dark:text-white">
               $9.50
             </p>
           </div>
         </div>
 
         {/* Right Customer Card */}
-        <div className="absolute top-[24%] right-[-4%] sm:right-[2%] bg-white rounded-2xl shadow-lg px-2 py-2 sm:px-3 sm:py-3 flex items-center gap-2 z-40">
+        <div className="absolute top-[24%] right-[-4%] sm:right-[2%] bg-white dark:bg-[#1a1a22] rounded-3xl shadow-xl dark:shadow-black/40 px-2 py-2 sm:px-3 sm:py-3 flex items-center gap-2 z-40 border border-gray-100 dark:border-white/10">
 
           <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-yellow-300 flex items-center justify-center text-lg sm:text-xl">
             😊
           </div>
 
           <div>
-            <h3 className="font-semibold text-[10px] sm:text-sm">
+            <h3 className="font-semibold text-[10px] sm:text-sm text-gray-900 dark:text-white">
               Happy Customer
             </h3>
 
-            <p className="text-gray-500 text-[8px] sm:text-xs">
+            <p className="text-gray-500 dark:text-gray-300 text-[8px] sm:text-xs">
               ⭐ 4.9 Reviews
             </p>
           </div>
@@ -88,7 +88,7 @@ export default function FoodHero() {
             alt="Food"
             width={130}
             height={130}
-            className="rounded-full object-cover shadow-2xl border-4 border-white w-[75px] h-[75px] sm:w-[110px] sm:h-[110px]"
+            className="rounded-full object-cover shadow-2xl border-4 border-white dark:border-[#1a1a22] w-[75px] h-[75px] sm:w-[110px] sm:h-[110px]"
           />
         </div>
 
@@ -99,7 +99,7 @@ export default function FoodHero() {
             alt="Food"
             width={130}
             height={130}
-            className="rounded-full object-cover shadow-2xl border-4 border-white w-[75px] h-[75px] sm:w-[110px] sm:h-[110px]"
+            className="rounded-full object-cover shadow-2xl border-4 border-white dark:border-[#1a1a22] w-[75px] h-[75px] sm:w-[110px] sm:h-[110px]"
           />
         </div>
 
@@ -110,7 +110,7 @@ export default function FoodHero() {
             alt="Food"
             width={130}
             height={130}
-            className="rounded-full object-cover shadow-2xl border-4 border-white w-[75px] h-[75px] sm:w-[110px] sm:h-[110px]"
+            className="rounded-full object-cover shadow-2xl border-4 border-white dark:border-[#1a1a22] w-[75px] h-[75px] sm:w-[110px] sm:h-[110px]"
           />
         </div>
 
@@ -121,7 +121,7 @@ export default function FoodHero() {
             alt="Food"
             width={130}
             height={130}
-            className="rounded-full object-cover shadow-2xl border-4 border-white w-[75px] h-[75px] sm:w-[110px] sm:h-[110px]"
+            className="rounded-full object-cover shadow-2xl border-4 border-white dark:border-[#1a1a22] w-[75px] h-[75px] sm:w-[110px] sm:h-[110px]"
           />
         </div>
 

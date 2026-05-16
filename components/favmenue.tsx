@@ -66,7 +66,7 @@ const categories = [
 
 export default function PopularMenu() {
   return (
-    <section className="relative py-24">
+    <section id="menu" className="relative py-24">
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-20">
 

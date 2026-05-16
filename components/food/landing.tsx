@@ -7,100 +7,15 @@ import FoodHero from "./hero";
 
 export default function FoodLandingPage() {
 
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
-
+ 
   return (
-    <main className="">
+    <main className="mt-[-40px]">
       
-      {/* NAVBAR */}
-      <header className="relative z-20 flex items-center justify-between px-10 lg:px-20 ">
-        
-        <div className="text-3xl font-black italic text-black dark:text-white">
-          <Image
-            alt="logo"
-            src="/logo.png"
-            height={150}
-            width={150}
-          />
-        </div>
+     
+      
 
-        <div className="">
-          <Image
-            src="/Vector 2.png"
-            alt="dashedline"
-            height={150}
-            width={150}
-            className="relative top-28 right-35"
-          />
-
-          <Image
-            src="/Arrow 1 (Stroke).png"
-            alt="dashedline"
-            height={15}
-            width={15}
-            className="relative top-28 right-[-2]"
-          />
-        </div>
-
-        <nav className="hidden lg:flex items-center gap-12 text-[15px] font-medium text-gray-700 dark:text-gray-300">
-          
-          <a
-            href="#"
-            className="hover:text-[#ff5a5f] transition-colors"
-          >
-            Today Special Offers
-          </a>
-
-          <a
-            href="#"
-            className="hover:text-[#ff5a5f] transition-colors"
-          >
-            Why FoodHut
-          </a>
-
-          <a
-            href="#"
-            className="hover:text-[#ff5a5f] transition-colors"
-          >
-            Our Menu
-          </a>
-
-          <a
-            href="#"
-            className="hover:text-[#ff5a5f] transition-colors"
-          >
-            Our Popular Food
-          </a>
-        </nav>
-
-        {/* RIGHT SIDE */}
-        <div className="flex items-center gap-4">
-
-          {/* DARK MODE BUTTON */}
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="w-12 h-12 rounded-full bg-white dark:bg-[#1c1c1c] border border-gray-200 dark:border-[#2c2c2c] flex items-center justify-center shadow-lg text-[#ff5a5f] transition-all duration-300"
-          >
-            {darkMode ? <FaSun /> : <FaMoon />}
-          </button>
-
-          {/* DOWNLOAD BUTTON */}
-          <button className="bg-[#ff5a5f] text-white px-7 py-3 rounded-full text-sm font-semibold shadow-xl hover:scale-105 transition-transform">
-            Download App
-          </button>
-        </div>
-      </header>
-
-      {/* HERO */}
-      <section className="relative z-10 px-10 lg:px-20 pt-8 pb-16">
+      
+      <section  className="relative z-10 px-10 lg:px-20 pt-8 pb-16">
         <div className="grid lg:grid-cols-2 items-center gap-10">
 
           {/* LEFT */}

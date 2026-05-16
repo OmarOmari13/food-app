@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function MultiServiceSection() {
   return (
-    <section className="relative">
+    <section id="aboutus" className="relative">
 
       {/* Top Right Decoration */}
       <div className="absolute top-0 right-0 opacity-70">

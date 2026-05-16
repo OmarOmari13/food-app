@@ -46,7 +46,7 @@ export default function SpecialOffers() {
   const prev = () => setIndex((p) => (p - 1 + foods.length) % foods.length);
 
   return (
-    <section className="min-h-screen overflow-hidden relative py-24">
+    <section id="spacialOffers" className="min-h-screen overflow-hidden relative py-24">
 
       {/* decorative */}
       {/* <div className="absolute left-6 top-24 h-24 w-24 rotate-12 rounded-full border-[10px] border-pink-200 opacity-40" /> */}

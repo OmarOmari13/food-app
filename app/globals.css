@@ -150,5 +150,6 @@ letter-spacing: 0%;
 
   html {
     @apply font-mono;
+    scroll-behavior: smooth;
   }
 }

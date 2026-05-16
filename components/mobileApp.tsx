@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function MobileAppSection() {
   return (
-    <section className="relative">
+    <section id="App" className="relative">
 
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#ffb84d]/10 blur-3xl rounded-full" />
